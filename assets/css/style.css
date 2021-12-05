@@ -1,11 +1,29 @@
 :root {
-    --blue: #00adff;
-    --grey-background:rgb(72, 92, 112);
+    --blue: #3DB6FF;
+    --grey-background:#4D4D4D;
+    --off-white: rgb(219, 219, 219);
+    --dark-blue: #252281;
 }
 
 h1 {
     font-size: 190%;
 }
+
+h3 {
+    font-size: 135%;
+}
+
+body {
+    background-color: var(--off-white);
+}
+
+footer {
+    padding-bottom: 10px;
+}
+
+/*  */
+/* Header section */
+/*  */
 
 #top-page {
     background-color: var(--grey-background);
@@ -45,7 +63,11 @@ nav a {
     text-align: center;
 }
 
-.hero-image {
+/*  */
+/* Main content section */
+/*  */
+
+#hero-image {
     width: 100%;
     height: 400px;
     margin-bottom: 20px;
@@ -58,7 +80,7 @@ nav a {
     position: relative;
 }
 
-.hero-image h2 {
+#hero-image h2 {
     position:absolute;
     bottom:20px;
     right:0px;
@@ -70,9 +92,121 @@ nav a {
     padding: 5px 20px;
 }
 
-/* Pseudo elements */
+.section-whole {
+    display:flex;
+    margin-bottom: 30px;
+    color: var(--dark-blue);
+}
 
+.section-title {
+    flex:1 1 25%;
+    text-align: right;
+    border-right: 5px solid var(--dark-blue);
+}
+
+.section-title h1 {
+    margin-right: 5px;
+}
+
+.section-content {
+    flex:1 1 75%;
+    padding:20px;
+}
+/* #work-content is a .section-content, but more unique, due to the flexbox inside of it */
+#work-content {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    border: 5px solid var(--blue);
+    flex: 1 1 40%;
+    margin: 5px;
+    position:relative;
+    width:100%;
+    min-height: 200px;
+    background-color: var(--grey-background);
+    background-size:contain;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.card-title {
+    width:fit-content;
+    background-color: var(--blue);
+    position:absolute;
+    left:0;
+    bottom: 15px;
+    padding: 5px;
+    line-height: 1.4;
+}
+
+/*  */
+/* Card IDs, add background-image for each new entry */
+/*  */
+
+#css-cheat-sheet {
+    background-image:url("../images/css_cheat_sheet.jpg");
+    flex:1 1 100%;
+    background-size:cover;
+    background-position: top;
+    height:400px;
+}
+
+#project-2 {
+    background-image:url("../images/computer_display_flatline.png");
+}
+
+#project-3 {
+    background-image:url("../images/javascript_isometric.png");
+}
+
+#project-4 {
+    background-image:url("../images/python_outline.png");
+}
+
+#project-5 {
+    background-image:url("../images/online_report_isometric.png");
+}
+
+/*  */
+/* End Card IDs */
+/*  */
+
+#contact-me ul {
+    display:flex;
+    align-content: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+#contact-me ul li {
+    list-style-type: none;
+    display:inline;
+    padding: 0 3px;
+    margin: 0 5px;
+    font-size: 28px;
+    border-bottom:5px solid var(--dark-blue);
+}
+#contact-me a {
+    text-decoration: none;
+}
+
+/*  */
+/* Pseudo elements */
+/*  */
+
+#contact-me a:visited {
+    color:var(--dark-blue);
+}
+
+#contact-me a:hover {
+    color:var(--blue);
+}
+
+/*  */
 /* Media Queries */
+/*  */
 
 @media screen and (max-width: 992px) {
     nav a{
@@ -111,5 +245,20 @@ nav a {
     nav a {
         flex-grow: 0;
         flex-shrink: 1;
+    }
+
+    .section-whole {
+        flex-direction: column;
+    }
+
+    .section-title {
+        border-right:none;
+        border-bottom: 5px solid var(--dark-blue);
+        margin:0 10px;
+        text-align: center;
+    }
+
+    .card {
+        flex-basis: 100%;
     }
 }
