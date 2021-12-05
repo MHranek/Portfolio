@@ -5,6 +5,10 @@
     --dark-blue: #252281;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 h1 {
     font-size: 190%;
 }
@@ -56,6 +60,7 @@ nav {
 nav a {
     flex:0 1 15%;
     color:var(--blue);
+    max-width: fit-content;
     text-decoration: none;
     border-bottom: 3px solid var(--blue);
     padding:0 10px;
@@ -95,6 +100,7 @@ nav a {
 .section-whole {
     display:flex;
     margin-bottom: 30px;
+    margin-right: 5%;
     color: var(--dark-blue);
 }
 
@@ -102,6 +108,7 @@ nav a {
     flex:1 1 25%;
     text-align: right;
     border-right: 5px solid var(--dark-blue);
+    max-width: 300px;
 }
 
 .section-title h1 {
@@ -129,6 +136,7 @@ nav a {
     background-size:contain;
     background-position: center;
     background-repeat: no-repeat;
+    transition: all 0.3s ease-in-out;
 }
 
 .card-title {
@@ -193,8 +201,12 @@ nav a {
 }
 
 /*  */
-/* Pseudo elements */
+/* Pseudo classes */
 /*  */
+
+nav a:hover {
+    color: #71c9ff;
+}
 
 #contact-me a:visited {
     color:var(--dark-blue);
@@ -204,13 +216,18 @@ nav a {
     color:var(--blue);
 }
 
+.card:hover,
+.card:focus {
+    box-shadow: 0 0 15px var(--dark-blue);
+}
+
 /*  */
 /* Media Queries */
 /*  */
 
 @media screen and (max-width: 992px) {
     nav a{
-        flex:1 1 33%;
+        flex:1 1 40%;
         max-width: 180px;
     }
 
@@ -249,6 +266,7 @@ nav a {
 
     .section-whole {
         flex-direction: column;
+        margin: 5px 10px;
     }
 
     .section-title {
@@ -256,6 +274,7 @@ nav a {
         border-bottom: 5px solid var(--dark-blue);
         margin:0 10px;
         text-align: center;
+        max-width: none;
     }
 
     .card {
