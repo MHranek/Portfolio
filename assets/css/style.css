@@ -97,6 +97,15 @@ nav a {
     padding: 5px 20px;
 }
 
+#headshot-image {
+    position:absolute;
+    left: 0px;
+    top: 0px;
+    margin:20px;
+    max-width:175px;
+    border:5px solid var(--grey-background);
+}
+
 .section-whole {
     display:flex;
     margin-bottom: 30px;
@@ -147,6 +156,7 @@ nav a {
     bottom: 15px;
     padding: 5px;
     line-height: 1.4;
+    color: var(--grey-background);
 }
 
 /*  */
@@ -214,6 +224,10 @@ nav a:hover {
 
 #contact-me a:hover {
     color:var(--blue);
+}
+
+.card:visited .card-title{
+    color:var(--dark-blue);
 }
 
 .card:hover,
