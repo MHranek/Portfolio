@@ -171,12 +171,16 @@ nav a {
     height:400px;
 }
 
-#project-2 {
-    background-image:url("../images/computer_display_flatline.png");
+#password-generator {
+    background-image:url("../images/password_generator_screenshot.png");
+    background-size:cover;
+    background-position: top;
 }
 
 #project-3 {
-    background-image:url("../images/javascript_isometric.png");
+    background-image:url("../images/Weather_Dashboard_Screenshot.png");
+    background-size:cover;
+    background-position: center;
 }
 
 #project-4 {
