@@ -177,14 +177,16 @@ nav a {
     background-position: top;
 }
 
-#project-3 {
+#weather-dashboard {
     background-image:url("../images/Weather_Dashboard_Screenshot.png");
     background-size:cover;
     background-position: center;
 }
 
-#project-4 {
-    background-image:url("../images/python_outline.png");
+#movie-hype-generator {
+    background-image:url("../images/movie_hype_generator.png");
+    background-size:cover;
+    background-position: top;
 }
 
 #project-5 {
