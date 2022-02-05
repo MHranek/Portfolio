@@ -163,12 +163,18 @@ nav a {
 /* Card IDs, add background-image for each new entry */
 /*  */
 
-#css-cheat-sheet {
-    background-image:url("../images/css_cheat_sheet.jpg");
+#teamdex {
+    background-image:url("../images/Homepage_screenshot.png");
     flex:1 1 100%;
     background-size:cover;
     background-position: top;
     height:400px;
+}
+
+#css-cheat-sheet {
+    background-image:url("../images/css_cheat_sheet.jpg");
+    background-size:cover;
+    background-position: top;
 }
 
 #password-generator {
